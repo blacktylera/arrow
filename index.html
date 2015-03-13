@@ -7,6 +7,8 @@
     <title>My Title</title>
     <link rel="stylesheet" href="bower_components/skeleton/css/normalize.css">
     <link rel="stylesheet" href="bower_components/skeleton/css/skeleton.css">
+    <link rel="stylesheet" href="/bower_components/font-awesome/css/font-awesome.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Bangers' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="css/main.css">
     <link rel="apple-touch-icon" sizes="57x57" href="/News.ico/apple-icon-57x57.png">
     <link rel="apple-touch-icon" sizes="60x60" href="/News.ico/apple-icon-60x60.png">
@@ -30,15 +32,23 @@
     <!--[if lt IE 9]>
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
-
     <div class="container">
-      <h1>Arrow</h1>
-      <div ng-app></div>
+      <div ng-app="app" ng-controller="ArticlesController as articles">
+        <h1>Articles</h1>
+        <div ng-view=""></div>
+      </div>
     </div>
     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/angular-route/angular-route.min.js"></script>
+    <script src="js/main.module.js"></script>
+    <script src="js/main.config.js"></script>
+    <script src="js/main.filters.js"></script>
     <script src="js/main.js"></script>
-  </body>
+    <script src="js/articles/articles.controller.js"></script>
+    <script src="js/articles/new.controller.js"></script>
+
+<!--     <script src="js/articles/table.html"></script>
+ -->  </body>
 </html>
